@@ -15,7 +15,7 @@
       <!-- Inserting a Ruby line of code, remember to close it at the end -->    
         
         <%= form_for :answer, url: '/answers', html: {class: 'form-horizontal'} do %>
-
+        <input type="hidden" name="answer[question_id]" value="<%= @question.id %>" />
 
  <!-- <form class ="form-horizontal" action="/answer" method="POST"> -->    
    
@@ -25,14 +25,14 @@
   <div class="form-group">
     <label for="inputEmail">Email address</label>
    
-    <input type="email" name="email" class="form-control" id="inputEmail" 
+    <input type="email" name="answer[email]" class="form-control" id="inputEmail" 
            placeholder="Email" required>
        </div>
   
     <div class="form-group">
     <label for="inputaAnswer">Answer</label>
   
-        <textarea class="form-control" name="answer_body" id="inputAnswer" placeholder="Your awesome answer here" required></textarea>     
+        <textarea class="form-control" name="answer[body]" id="inputAnswer" placeholder="Your awesome answer here" required></textarea>     
   </div>
          
        

@@ -6,72 +6,29 @@
 </div>
 
 
-
-
 <!-- Question 1-->
 <div class="container">
- <div class="media">
+    <% @questions.each do |q| %>
+    
+    <div class="media">
   <div class="media-left">
     <a href="#">
-      <img class="media-object" src="http://myhomelife.org.uk/wp-content/uploads/2015/06/Icon-round-Question_mark1.jpg" height="60" width="60" alt="...">
+      <img class="media-object" src="<%= q.gravatar %>" height="60" width="60" >
     </a>
   </div>
+        
   <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
- So I have a question regarding this and that and this and that, and I actually 
-      don't really know what I'm asking for but anyways, this is a test and I'm just trying to fill 
-      up some space lolololollo. I hope this works! HEHHEE :D
+      <h4 class="media-heading"><%= q.email %> asked: </h4>
+      <%= time_ago_in_words q.created_at %> ago <BR>
+      <%= q.body %>
+     
       <div>
-      <a href="/questions/12" class="btn btn-success btn-xs"> View Answers</a>
+          <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
       </div>
       
-  </div>
+
 </div>
+    </div>
 
 
-    
-    
-    
-    
-    
-<!-- Question -->
-
- <div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://myhomelife.org.uk/wp-content/uploads/2015/06/Icon-round-Question_mark1.jpg" height="60" width="60" alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
- So I have a question regarding this and that and this and that, and I actually 
-      don't really know what I'm asking for but anyways, this is a test and I'm just trying to fill 
-      up some space lolololollo. I hope this works! HEHHEE :D
-          <div>
-      <a href="/questions/12" class="btn btn-success btn-xs"> View Answers</a>
-      </div>
-      
-  </div>
-</div>
-
-
-
-<!-- Question -->
-
- <div class="media">
-  <div class="media-left">
-    <a href="#">
-      <img class="media-object" src="http://myhomelife.org.uk/wp-content/uploads/2015/06/Icon-round-Question_mark1.jpg" height="60" width="60" alt="...">
-    </a>
-  </div>
-  <div class="media-body">
-    <h4 class="media-heading">user@email.com asked:</h4>
- So I have a question regarding this and that and this and that, and I actually 
-      don't really know what I'm asking for but anyways, this is a test and I'm just trying to fill 
-      up some space lolololollo. I hope this works! HEHHEE :D
-          <div>
-      <a href="/questions/12" class="btn btn-success btn-xs"> View Answers</a>
-      </div>
-  </div>
-</div>
-</div>
+    <% end %>
