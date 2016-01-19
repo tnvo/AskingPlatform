@@ -15307,3 +15307,2090 @@ Processing by QuestionsController#show as HTML
   Rendered home/_navbar.html.erb (0.0ms)
   Rendered home/_new_question_form.html.erb (0.3ms)
 Completed 200 OK in 42ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+DEPRECATION WARNING: You didn't set `secret_key_base`. Read the upgrade documentation to learn more about this new config option. (called from service at /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:02:18 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.5ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (84.1ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (1.1ms)
+Completed 200 OK in 1256ms (Views: 1104.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:02:57 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (1.1ms)
+  [1m[35mAnswer Load (6.5ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (43.6ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.9ms)
+Completed 200 OK in 318ms (Views: 94.2ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:03:45 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.2ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:09:22 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.5ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (6.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 100ms (Views: 98.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:10:07 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.9ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (212.9ms)
+Completed 500 Internal Server Error in 218ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined local variable or method `answer' for #<#<Class:0x007fd3f8aab378>:0x007fd3f871efc0>):
+    34: <div class="media">
+    35: <div class="media-left">
+    36: <a href="#">
+    37: <img class="media-object" src="<%= answer.gravatar %>" height="60" width="60">
+    38: </a>
+    39: </div>
+    40: <div class="media-body">
+  app/views/questions/show.html.erb:37:in `_app_views_questions_show_html_erb___141708380034786498_70274191519380'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (142.5ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:10:16 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (4.0ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 30ms (Views: 27.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:10:16 -0700
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:14:39 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (8.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 57.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:14:39 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:14:40 -0700
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:16:38 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.7ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (3.8ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:16:38 -0700
+
+
+Started GET "/" for ::1 at 2016-01-18 15:16:48 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/3" for ::1 at 2016-01-18 15:16:51 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered home/_new_answer_form.html.erb (0.9ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 3]]
+  Rendered questions/show.html.erb within layouts/application (4.7ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:16:56 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:16:57 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (3.7ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 27.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:17:11 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (1.7ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (7.0ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:17:12 -0700
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:17:16 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (3.9ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 49ms (Views: 46.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:17:16 -0700
+
+
+Started POST "/answers" for ::1 at 2016-01-18 15:17:23 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BiXxjJqLVpZsAgEWBA1ZdvVfBTibMdossfS7Rj9ymDa05O8xANANI4jUtiBFQ3/6oFAsBkzVzsUk5bhbuST4Gw==", "answer"=>{"question_id"=>"", "email"=>"thaovo@email.arizona.edu", "body"=>"asd"}}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=):
+  app/controllers/answers_controller.rb:5:in `create'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (60.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (137.2ms)
+
+
+Started GET "/answers" for ::1 at 2016-01-18 15:18:14 -0700
+
+AbstractController::ActionNotFound (The action 'index' could not be found for AnswersController):
+  actionpack (4.2.5) lib/abstract_controller/base.rb:132:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Tvo/.rvm/rubies/ruby-2.2.1/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/unknown_action.html.erb within rescues/layout (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (138.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:18:19 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:18:23 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (1.2ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (5.7ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 44ms (Views: 42.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 15:18:42 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"R9/Qik7RXl4kSMP+9sTJNhyMCVwcVrnMA9AoX/t01JT1Hs431IoF68CedMi3iu+6SYMgYsuyrSWWwStCfSK0uQ==", "answer"=>{"question_id"=>"4", "email"=>"t@buggy.com", "body"=>"Bug detected at the bottom of the page"}}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (24.7ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["question_id", 4], ["email", "t@buggy.com"], ["body", "Bug detected at the bottom of the page"], ["created_at", "2016-01-18 22:18:42.235860"], ["updated_at", "2016-01-18 22:18:42.235860"]]
+  [1m[36m (3.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/4
+Completed 302 Found in 80ms (ActiveRecord: 28.3ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:18:42 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (1.8ms)
+  [1m[36mAnswer Load (0.7ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (9.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:18:54 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.9ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/4" for ::1 at 2016-01-18 15:26:48 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 4]]
+  Rendered questions/show.html.erb within layouts/application (3.8ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:26:54 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.5ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.2ms)
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM "answers"[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "answers"
+  [1m[36mSQL (5.7ms)[0m  [1mDELETE FROM "questions"[0m
+
+
+Started GET "/" for ::1 at 2016-01-18 15:34:32 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:34:50 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GHlM/u+VJp0TS4UWPf293MSfOHnZhHYkCPFXmYsgI2GquFJDdc59KPedMiB8s5tQkZARRw5gYs2d4FSEDXZDTA==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"What is this......."}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", "What is this......."], ["created_at", "2016-01-18 22:34:50.420635"], ["updated_at", "2016-01-18 22:34:50.420635"]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:34:50 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/5" for ::1 at 2016-01-18 15:34:52 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (3.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 15:35:01 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GbgQ1hOsSeanalk6b4aTEAVKytWr2UxPHMgp8MTsLiqreQ5rifcSU0O87gwuyLWcUEXj63w9WKaJ2SrtQrpOBw==", "answer"=>{"question_id"=>"5", "email"=>"thaovo@email.arizona.edu", "body"=>"This is what............."}}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question_id", 5], ["email", "thaovo@email.arizona.edu"], ["body", "This is what............."], ["created_at", "2016-01-18 22:35:01.858068"], ["updated_at", "2016-01-18 22:35:01.858068"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/5
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/questions/5" for ::1 at 2016-01-18 15:35:01 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 5]]
+  Rendered questions/show.html.erb within layouts/application (4.0ms)
+  Rendered home/_navbar.html.erb (0.2ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:35:04 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.2ms)
+  [1m[35mSQL (6.0ms)[0m  DELETE FROM "questions"
+  [1m[36mSQL (6.7ms)[0m  [1mDELETE FROM "answers"[0m
+
+
+Started GET "/" for ::1 at 2016-01-18 15:35:54 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:35:56 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 33ms (Views: 32.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:35:58 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (0.7ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 41ms (Views: 40.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:35:59 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 39ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:36:00 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (0.5ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:36:00 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:36:00 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (0.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:36:11 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 34.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:36:12 -0700
+
+
+Started GET "/" for ::1 at 2016-01-18 15:37:04 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.2ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 33.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:37:04 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:37:05 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:37:05 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:37:05 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:37:05 -0700
+
+
+Started GET "/" for ::1 at 2016-01-18 15:37:09 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.1ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:37:13 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 24ms (Views: 23.2ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:37:19 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xHeVgOBT2fwYidhb0Ar2KMWIbUCHqzm/S12/kqfqGxd2tos9egiCSfxfb22RRNCkkIdEflBPLVbeTLyPIbx7Og==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>":)"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", ":)"], ["created_at", "2016-01-18 22:37:19.229733"], ["updated_at", "2016-01-18 22:37:19.229733"]]
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:37:19 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 31ms (Views: 29.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-01-18 15:37:20 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered home/_new_answer_form.html.erb (0.5ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 32.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 15:37:25 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Py9f2HQp5b0Gfd0aXLEjLaPoWv4//TMFZW0VgGRkoTON7kFl7nK+COKraiwd/wWh9udzwOgZJ+zwfBad4jLBHg==", "answer"=>{"question_id"=>"6", "email"=>"thaovo@email.arizona.edu", "body"=>"LOL"}}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question_id", 6], ["email", "thaovo@email.arizona.edu"], ["body", "LOL"], ["created_at", "2016-01-18 22:37:25.731672"], ["updated_at", "2016-01-18 22:37:25.731672"]]
+  [1m[35m (5.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/6
+Completed 302 Found in 11ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/questions/6" for ::1 at 2016-01-18 15:37:25 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 6]]
+  Rendered questions/show.html.erb within layouts/application (2.4ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+  [1m[35mSQL (6.1ms)[0m  DELETE FROM "answers"
+  [1m[36mSQL (2.4ms)[0m  [1mDELETE FROM "questions"[0m
+
+
+Started GET "/questions/6" for ::1 at 2016-01-18 15:39:15 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 6]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Question with 'id'=6):
+  app/controllers/questions_controller.rb:4:in `show'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (92.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (196.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:39:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Tvo/ROR/HU/app/views/home/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Tvo/ROR/HU/app/views/home/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/home/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/home/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.2ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (137.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:39:21 -0700
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/Users/Tvo/ROR/HU/app/views/home/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/Tvo/ROR/HU/app/views/home/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/home/index.html.erb:36: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/home/index.html.erb:38: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.2ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (150.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:39:39 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.7ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    29:     <% end %>
+    30:         
+    31:         <!-- If no questions, display something-->
+    32:         <% if @question.empty? %>
+    33:         <div class="alert alert-info">Nothing here yet, be the first to ask?</div>
+    34:         <% end %>
+    35:     </div>
+  app/views/home/index.html.erb:32:in `_app_views_home_index_html_erb__4449295756498844128_70274191073320'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:39:41 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `empty?' for nil:NilClass):
+    29:     <% end %>
+    30:         
+    31:         <!-- If no questions, display something-->
+    32:         <% if @question.empty? %>
+    33:         <div class="alert alert-info">Nothing here yet, be the first to ask?</div>
+    34:         <% end %>
+    35:     </div>
+  app/views/home/index.html.erb:32:in `_app_views_home_index_html_erb__4449295756498844128_70274191073320'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.1ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:40:00 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.3ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:40:20 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vYzqsemL4ni1l+urqzFtDMhbfIMQmcGpiBd65rQK+bEPTfQMc9C5zVFBXJ3qf0uAnVRVvcd91UAdBnn7MlyZnA==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"LOL :)"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", "LOL :)"], ["created_at", "2016-01-18 22:40:20.350497"], ["updated_at", "2016-01-18 22:40:20.350497"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:40:20 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.7ms)
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-01-18 15:40:22 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 7]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (2.7ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:40:24 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 34ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-01-18 15:44:39 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (3.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 15:44:47 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ODa41JOlx8c+kNpknEoOtHoo13w28sA9k6W5h0E7ruGK96ZpCf6cctpGbVLdBCg4Lyf+QuEW1NQGtLqax23OzA==", "answer"=>{"question_id"=>"7", "email"=>"thaovo@email.arizona.edu", "body"=>"ok"}}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["question_id", 7], ["email", "thaovo@email.arizona.edu"], ["body", "ok"], ["created_at", "2016-01-18 22:44:47.276159"], ["updated_at", "2016-01-18 22:44:47.276159"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/questions/7
+Completed 302 Found in 9ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-01-18 15:44:47 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered home/_new_answer_form.html.erb (0.3ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (3.4ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/questions/7" for ::1 at 2016-01-18 15:50:42 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered home/_new_answer_form.html.erb (0.5ms)
+  [1m[36mAnswer Load (0.2ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 7]]
+  Rendered questions/show.html.erb within layouts/application (9.1ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 38.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:50:42 -0700
+
+
+Started GET "/" for ::1 at 2016-01-18 15:50:47 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:51:02 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lACUm0F/CDul5SY7AHV8bq3QxMpV9YEHH6qe4+bEmkMmwYom2yRTjkEzkQ1BO1ri+N/t9IIRle6Ku53+YJL6bg==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"REMEMBER ME"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", "REMEMBER ME"], ["created_at", "2016-01-18 22:51:02.152008"], ["updated_at", "2016-01-18 22:51:02.152008"]]
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:51:02 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.0ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:51:04 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.1ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 35ms (Views: 33.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:51:32 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.4ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:51:34 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:51:34 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:51:34 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:51:35 -0700
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:51:47 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oBc5QJrC2U6IWvRWhOFT9iIBUkgZzkOfqpNQUS3ntveeLW+W9Mu1ztCqneI57sTnhE/VvrEtmAhqqG/WbfRZfg==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"remember me now?"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (31.0ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", "remember me now?"], ["created_at", "2016-01-18 22:51:47.776000"], ["updated_at", "2016-01-18 22:51:47.776000"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 38ms (ActiveRecord: 33.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:51:47 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered home/_navbar.html.erb (0.0ms)
+  Rendered home/_new_question_form.html.erb (0.6ms)
+Completed 200 OK in 105ms (Views: 104.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:55:53 -0700
+
+SyntaxError (/Users/Tvo/ROR/HU/app/helpers/application_helper.rb:5: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/helpers/application_helper.rb:5: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/home_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (60.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (131.0ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:56:09 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (5.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 30.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 15:56:09 -0700
+
+
+Started GET "/" for ::1 at 2016-01-18 15:58:46 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered home/_navbar.html.erb (0.3ms)
+  Rendered home/_new_question_form.html.erb (1.4ms)
+Completed 200 OK in 32ms (Views: 30.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 15:58:56 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HnVexhzbeR9NPT+eL48w6BBZIE6zfqhneBLa82bcFXCstEB7hoAiqqnriKhuwRZkRVYJcGSavI7tA9nu4Ip1XQ==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"Why DONT YOU REMEMBER ME"}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "thaovo@email.arizona.edu"], ["body", "Why DONT YOU REMEMBER ME"], ["created_at", "2016-01-18 22:58:56.879320"], ["updated_at", "2016-01-18 22:58:56.879320"]]
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 15:58:56 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (3.2ms)
+  Rendered home/_navbar.html.erb (0.2ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/questions/10" for ::1 at 2016-01-18 16:00:58 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered home/_new_answer_form.html.erb (1.1ms)
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 10]]
+  Rendered questions/show.html.erb within layouts/application (5.6ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (1.4ms)
+Completed 200 OK in 47ms (Views: 40.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 16:01:05 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WnBnNTe+8gcCa2NUSc71/ealvNwDMFZfuzchMnr0zdHosXmIreWpsua91GIIgNNxs6qV4tTUQrYuJiIv/KKt/A==", "answer"=>{"question_id"=>"10", "email"=>"thaovo@email.arizona.edu", "body"=>"POO"}}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35m (0.8ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question_id", 10], ["email", "thaovo@email.arizona.edu"], ["body", "POO"], ["created_at", "2016-01-18 23:01:05.053710"], ["updated_at", "2016-01-18 23:01:05.053710"]]
+  [1m[35m (3.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/questions/10
+Completed 302 Found in 35ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/questions/10" for ::1 at 2016-01-18 16:01:05 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mQuestion Load (0.1ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 10]]
+  Rendered home/_new_answer_form.html.erb (2.0ms)
+  [1m[35mAnswer Load (0.2ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 10]]
+  Rendered questions/show.html.erb within layouts/application (6.1ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.9ms)
+Completed 200 OK in 60ms (Views: 57.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 16:01:07 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 38ms (Views: 36.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 16:03:06 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  Rendered home/_navbar.html.erb (0.5ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 27ms (Views: 26.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 16:03:07 -0700
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "questions"
+  [1m[36mSQL (2.2ms)[0m  [1mDELETE FROM "answers"[0m
+
+
+Started GET "/" for ::1 at 2016-01-18 16:33:25 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.8ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 35ms (Views: 30.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:33:26 -0700
+
+
+Started POST "/questions" for ::1 at 2016-01-18 16:40:14 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P2CkXFaz3GlaAP4MHm7K80v8MMSKBqTUVeTTn+9E3T+NobrhzOiH3L7WSTpfIOx/HvMZ+l3isD3A9dCCaRK9Eg==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"What is"}}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "thaovo@email.arizona.edu"], ["body", "What is"], ["created_at", "2016-01-18 23:40:14.539548"], ["updated_at", "2016-01-18 23:40:14.539548"]]
+  [1m[35m (5.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 27ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 16:40:14 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__4449295756498844128_70274150152480'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__4449295756498844128_70274150152480'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (129.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 16:40:33 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.4ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (12.7ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 52.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/answers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/questions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/answers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/questions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-18 16:40:33 -0700
+
+
+Started GET "/questions/11" for ::1 at 2016-01-18 16:40:38 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[35mAnswer Load (0.3ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.8ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 40ms (Views: 34.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 16:40:43 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UQTeOWsi9K6fH8ykDmBdplV+AE6CVbOWvTzHLbiKnb7jxcCE8XmvG3vJe5JPLnsqAHEpcFWxp38oLcQwPtz9kw==", "answer"=>{"question_id"=>"11", "email"=>"thaovo@email.arizona.edu", "body"=>"asd"}}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["question_id", 11], ["email", "thaovo@email.arizona.edu"], ["body", "asd"], ["created_at", "2016-01-18 23:40:43.514534"], ["updated_at", "2016-01-18 23:40:43.514534"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 2.4ms)
+
+NameError (undefined local variable or method `answer' for #<AnswersController:0x007fd3fab27110>):
+  app/controllers/answers_controller.rb:7:in `create'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (133.7ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 16:55:25 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (11.1ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__4449295756498844128_70274150152480'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__4449295756498844128_70274150152480'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (126.1ms)
+
+
+Started GET "/rails/mailers/main_mailer" for ::1 at 2016-01-18 16:57:55 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"main_mailer"}
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/main_mailer/notify_question_author" for ::1 at 2016-01-18 16:57:57 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"main_mailer/notify_question_author"}
+
+MainMailer#notify_question_author: processed outbound mail in 1.9ms
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 0.0ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/mailers/main_mailer.rb:8:in `notify_question_author'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (70.2ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (125.6ms)
+
+
+Started GET "/rails/mailers/main_mailer" for ::1 at 2016-01-18 16:59:31 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"main_mailer"}
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/railties-4.2.5/lib/rails/templates/rails/mailers/mailer.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/mailers/main_mailer/notify_question_author" for ::1 at 2016-01-18 16:59:33 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"main_mailer/notify_question_author"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:59:33.175299"], ["updated_at", "2016-01-18 23:59:33.175299"]]
+  [1m[35m (5.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:59:33.191825"], ["updated_at", "2016-01-18 23:59:33.191825"]]
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?[0m  [["question_id", 12], ["updated_at", "2016-01-18 23:59:33.198336"], ["id", 15]]
+  [1m[35m (1.3ms)[0m  commit transaction
+
+MainMailer#notify_question_author: processed outbound mail in 8.2ms
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 10.6ms)
+
+I18n::InvalidLocaleData (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+  app/mailers/main_mailer.rb:12:in `notify_question_author'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (122.1ms)
+
+
+Started GET "/rails/mailers/main_mailer/notify_question_author" for ::1 at 2016-01-18 17:05:37 -0700
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"main_mailer/notify_question_author"}
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT  "answers".* FROM "answers"  ORDER BY "answers"."id" ASC LIMIT 1[0m
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+
+MainMailer#notify_question_author: processed outbound mail in 18.0ms
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 1.4ms)
+
+I18n::InvalidLocaleData (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+  app/mailers/main_mailer.rb:14:in `notify_question_author'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (75.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (59.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (131.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:05:41 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (14.0ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__4449295756498844128_70274150152480'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__4449295756498844128_70274150152480'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (15.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (83.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (57.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (140.5ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:05:41 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__4449295756498844128_70274150152480'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__4449295756498844128_70274150152480'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (75.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (56.2ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (122.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:10:00 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (16.9ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.8ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__155052954134159936_70315090184660'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__155052954134159936_70315090184660'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (63.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (165.2ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:12:01 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.4ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (12.2ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__155052954134159936_70315090184660'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__155052954134159936_70315090184660'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (8.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (73.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (54.9ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (121.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:15:43 -0700
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (8.6ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (can not load translations from /Users/Tvo/ROR/HU/config/locales/en.yml: #<Psych::SyntaxError: (/Users/Tvo/ROR/HU/config/locales/en.yml): did not find expected key while parsing a block mapping at line 23 column 3>):
+    15:   </div>        
+    16:   <div class="media-body">
+    17:       <h4 class="media-heading"><%= q.email %> asked: </h4>
+    18:       <%= time_ago_in_words q.created_at %> ago <BR>
+    19:       <%= q.body %>
+    20:       <div>
+    21:           <a href="<%= question_path(q) %>" class="btn btn-success btn-xs"> View Answers</a>
+  app/views/home/index.html.erb:18:in `block in _app_views_home_index_html_erb__155052954134159936_70315090184660'
+  app/views/home/index.html.erb:8:in `_app_views_home_index_html_erb__155052954134159936_70315090184660'
+
+
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (74.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (55.8ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Tvo/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (119.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:24:33 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.5ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (21.9ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (1.6ms)
+Completed 200 OK in 542ms (Views: 530.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/questions/12" for ::1 at 2016-01-18 17:24:36 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered home/_new_answer_form.html.erb (0.8ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 12]]
+  Rendered questions/show.html.erb within layouts/application (14.3ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.8ms)
+Completed 200 OK in 74ms (Views: 41.7ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 17:24:42 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/Ggwy/cLFXPrRsZAADgl0BE6oOs/DqsQtPPyHCWRi+tOqS52bVBOxg+QcXZBdgNcRDWJ1ejqv/kh4vEBo8frxg==", "answer"=>{"question_id"=>"12", "email"=>"thaovo@email.arizona.edu", "body"=>"asd"}}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 12]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["question_id", 12], ["email", "thaovo@email.arizona.edu"], ["body", "asd"], ["created_at", "2016-01-19 00:24:42.102742"], ["updated_at", "2016-01-19 00:24:42.102742"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: 67ab0a0d-908d-43aa-9071-dc97aa189f35) to SuckerPunch(mailers) with arguments: "MainMailer", "notify_question_author", "deliver_now", gid://hu/Answer/16
+Redirected to http://localhost:3000/questions/12
+Completed 302 Found in 98ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/questions/12" for ::1 at 2016-01-18 17:24:42 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 12]]
+  Rendered home/_new_answer_form.html.erb (1.0ms)
+  [1m[36mAnswer Load (0.3ms)[0m  [1mSELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1[0m  [["id", 16]]
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 12]]
+[ActiveJob] [ActionMailer::DeliveryJob] [67ab0a0d-908d-43aa-9071-dc97aa189f35] Performing ActionMailer::DeliveryJob from SuckerPunch(mailers) with arguments: "MainMailer", "notify_question_author", "deliver_now", gid://hu/Answer/16
+  Rendered questions/show.html.erb within layouts/application (11.0ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [67ab0a0d-908d-43aa-9071-dc97aa189f35] 
+MainMailer#notify_question_author: processed outbound mail in 1.1ms
+[ActiveJob] [ActionMailer::DeliveryJob] [67ab0a0d-908d-43aa-9071-dc97aa189f35] Performed ActionMailer::DeliveryJob from SuckerPunch(mailers) in 3.19ms
+Actor crashed!
+ArgumentError: wrong number of arguments (1 for 0)
+	/Users/Tvo/ROR/HU/app/mailers/main_mailer.rb:8:in `notify_question_author'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/base.rb:198:in `process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/callbacks.rb:19:in `process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/base.rb:137:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionview-4.2.5/lib/action_view/rendering.rb:30:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:596:in `block in process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `block in instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:593:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:584:in `initialize'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:25:in `new'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:25:in `__getobj__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:34:in `message'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:85:in `deliver_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/delivery_job.rb:10:in `perform'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:32:in `block in perform_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:117:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:117:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:498:in `block (2 levels) in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `block (2 levels) in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/i18n-0.7.0/lib/i18n.rb:257:in `with_locale'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `instance_exec'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `block in make_lambda'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `block in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `block in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:498:in `block (2 levels) in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `block (2 levels) in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:23:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:23:in `block (4 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `block in instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:22:in `block (3 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:43:in `block in tag_logger'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:43:in `tag_logger'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:19:in `block (2 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `instance_exec'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `block in make_lambda'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `block in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `block in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:778:in `_run_perform_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:31:in `perform_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:21:in `execute'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/queue_adapters/sucker_punch_adapter.rb:35:in `perform'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:16:in `dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 40.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:24:44 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.9ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/questions/11" for ::1 at 2016-01-18 17:24:46 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[36mAnswer Load (0.1ms)[0m  [1mSELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC[0m  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.4ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 29ms (Views: 26.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/answers" for ::1 at 2016-01-18 17:24:51 -0700
+Processing by AnswersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aGE5JL4mYrRs8gfyI3FO1FuxSNt/63a0DPTEq5UHiT/aoCeZJH05AYgksMRiP2hYDr5h5agPYl2Z5ce2E1HpEg==", "answer"=>{"question_id"=>"11", "email"=>"thaovo@email.arizona.edu", "body"=>"sad"}}
+  [1m[35mQuestion Load (0.1ms)[0m  SELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1  [["id", 11]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["question_id", 11], ["email", "thaovo@email.arizona.edu"], ["body", "sad"], ["created_at", "2016-01-19 00:24:51.455004"], ["updated_at", "2016-01-19 00:24:51.455004"]]
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+[ActiveJob] Enqueued ActionMailer::DeliveryJob (Job ID: ad93c465-a671-44fc-9043-a5cea1cd8070) to SuckerPunch(mailers) with arguments: "MainMailer", "notify_question_author", "deliver_now", gid://hu/Answer/17
+  [1m[35mAnswer Load (0.4ms)[0m  SELECT  "answers".* FROM "answers" WHERE "answers"."id" = ? LIMIT 1  [["id", 17]]
+Redirected to http://localhost:3000/questions/11
+[ActiveJob] [ActionMailer::DeliveryJob] [ad93c465-a671-44fc-9043-a5cea1cd8070] Performing ActionMailer::DeliveryJob from SuckerPunch(mailers) with arguments: "MainMailer", "notify_question_author", "deliver_now", gid://hu/Answer/17
+Completed 302 Found in 20ms (ActiveRecord: 6.1ms)
+[ActiveJob] [ActionMailer::DeliveryJob] [ad93c465-a671-44fc-9043-a5cea1cd8070] 
+MainMailer#notify_question_author: processed outbound mail in 0.4ms
+[ActiveJob] [ActionMailer::DeliveryJob] [ad93c465-a671-44fc-9043-a5cea1cd8070] Performed ActionMailer::DeliveryJob from SuckerPunch(mailers) in 2.14ms
+Actor crashed!
+ArgumentError: wrong number of arguments (1 for 0)
+	/Users/Tvo/ROR/HU/app/mailers/main_mailer.rb:8:in `notify_question_author'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/base.rb:198:in `process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/callbacks.rb:19:in `process_action'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/abstract_controller/base.rb:137:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionview-4.2.5/lib/action_view/rendering.rb:30:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:596:in `block in process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `block in instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:593:in `process'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/base.rb:584:in `initialize'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:25:in `new'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:25:in `__getobj__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:34:in `message'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/message_delivery.rb:85:in `deliver_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/actionmailer-4.2.5/lib/action_mailer/delivery_job.rb:10:in `perform'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:32:in `block in perform_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:117:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:117:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:498:in `block (2 levels) in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `block (2 levels) in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/i18n-0.7.0/lib/i18n.rb:257:in `with_locale'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/translation.rb:7:in `block (2 levels) in <module:Translation>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `instance_exec'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `block in make_lambda'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `block in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `block in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:498:in `block (2 levels) in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:343:in `block (2 levels) in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:23:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:23:in `block (4 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `block in instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/notifications.rb:164:in `instrument'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:22:in `block (3 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:43:in `block in tag_logger'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `block in tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:26:in `tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/tagged_logging.rb:68:in `tagged'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:43:in `tag_logger'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/logging.rb:19:in `block (2 levels) in <module:Logging>'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `instance_exec'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:441:in `block in make_lambda'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:342:in `block in simple'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:497:in `block in around'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:505:in `call'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:778:in `_run_perform_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activesupport-4.2.5/lib/active_support/callbacks.rb:81:in `run_callbacks'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:31:in `perform_now'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/execution.rb:21:in `execute'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/activejob-4.2.5/lib/active_job/queue_adapters/sucker_punch_adapter.rb:35:in `perform'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `public_send'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/calls.rb:28:in `dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/call/sync.rb:16:in `dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/cell.rb:50:in `block in dispatch'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/cell.rb:76:in `block in task'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/actor.rb:339:in `block in task'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/task.rb:44:in `block in initialize'
+	/Users/Tvo/.rvm/gems/ruby-2.2.1/gems/celluloid-0.17.3/lib/celluloid/task/fibered.rb:14:in `block in create'
+
+
+Started GET "/questions/11" for ::1 at 2016-01-18 17:24:51 -0700
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = ? LIMIT 1[0m  [["id", 11]]
+  Rendered home/_new_answer_form.html.erb (0.4ms)
+  [1m[35mAnswer Load (0.1ms)[0m  SELECT "answers".* FROM "answers" WHERE "answers"."question_id" = ?  ORDER BY "answers"."created_at" DESC  [["question_id", 11]]
+  Rendered questions/show.html.erb within layouts/application (3.5ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.2ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:24:52 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.4ms)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/questions" for ::1 at 2016-01-18 17:24:58 -0700
+Processing by QuestionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SEJWwgnp7LnYtjOEglp5nnzEFvyLC0HsRbKj3yvUJRL6g0h/k7K3DDxghLLDFF8SKcs/wlzvVQXQo6DCrYJFPw==", "question"=>{"email"=>"thaovo@email.arizona.edu", "body"=>"asdasd"}}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "thaovo@email.arizona.edu"], ["body", "asdasd"], ["created_at", "2016-01-19 00:24:58.287427"], ["updated_at", "2016-01-19 00:24:58.287427"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 6ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2016-01-18 17:24:58 -0700
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (1.6ms)
+  Rendered home/_navbar.html.erb (0.1ms)
+  Rendered home/_new_question_form.html.erb (0.3ms)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+  [1m[35mSQL (7.2ms)[0m  DELETE FROM "answers"
+  [1m[36mSQL (18.5ms)[0m  [1mDELETE FROM "questions"[0m
+Couldn't cleanly terminate all actors in 10 seconds!

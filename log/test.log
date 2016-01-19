@@ -1,0 +1,478 @@
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "answers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "question_id" integer, "email" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE TABLE "questions" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar NOT NULL, "body" text NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (1.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160118104324')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160118092858')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:23:50', '2016-01-18 23:23:50', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:23:50', '2016-01-18 23:23:50', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:23:50', '2016-01-18 23:23:50', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:23:50', '2016-01-18 23:23:50', 298486374)
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (15.4ms)
+  Rendered home/_navbar.html.erb (0.6ms)
+  Rendered home/_new_question_form.html.erb (1.4ms)
+Completed 200 OK in 337ms (Views: 335.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  Rendered main_mailer/notify_question_author.html.erb within layouts/mailer (0.4ms)
+  Rendered main_mailer/notify_question_author.text.erb within layouts/mailer (0.3ms)
+
+MainMailer#notify_question_author: processed outbound mail in 21.7ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:24:30', '2016-01-18 23:24:30', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:24:30', '2016-01-18 23:24:30', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:24:30', '2016-01-18 23:24:30', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:24:30', '2016-01-18 23:24:30', 298486374)
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  Rendered main_mailer/notify_question_author.html.erb within layouts/mailer (1.6ms)
+  Rendered main_mailer/notify_question_author.text.erb within layouts/mailer (0.3ms)
+
+MainMailer#notify_question_author: processed outbound mail in 30.9ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (6.7ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (1.1ms)
+Completed 200 OK in 196ms (Views: 195.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:26:22', '2016-01-18 23:26:22', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:26:22', '2016-01-18 23:26:22', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:26:22', '2016-01-18 23:26:22', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:26:22', '2016-01-18 23:26:22', 298486374)
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (32.6ms)
+Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 7.3ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:26:39', '2016-01-18 23:26:39', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:26:39', '2016-01-18 23:26:39', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:26:39', '2016-01-18 23:26:39', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:26:39', '2016-01-18 23:26:39', 298486374)
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 5.6ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:27:49', '2016-01-18 23:27:49', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:27:49', '2016-01-18 23:27:49', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:27:49', '2016-01-18 23:27:49', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:27:49', '2016-01-18 23:27:49', 298486374)
+  [1m[36m (5.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 5.0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (13.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:32:07', '2016-01-18 23:32:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:32:07', '2016-01-18 23:32:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:32:07', '2016-01-18 23:32:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:32:07', '2016-01-18 23:32:07', 298486374)
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:32:07.614279"], ["updated_at", "2016-01-18 23:32:07.614279"]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:32:07.619727"], ["updated_at", "2016-01-18 23:32:07.619727"]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?  [["question_id", 980190963], ["updated_at", "2016-01-18 23:32:07.636197"], ["id", 980190963]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+MainMailer#notify_question_author: processed outbound mail in 0.9ms
+  [1m[35m (1.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (9.9ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:33:04', '2016-01-18 23:33:04', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:33:04', '2016-01-18 23:33:04', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:33:04', '2016-01-18 23:33:04', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:33:04', '2016-01-18 23:33:04', 298486374)
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:33:04.817675"], ["updated_at", "2016-01-18 23:33:04.817675"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:33:04.827017"], ["updated_at", "2016-01-18 23:33:04.827017"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?  [["question_id", 980190963], ["updated_at", "2016-01-18 23:33:04.849399"], ["id", 980190963]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+MainMailer#notify_question_author: processed outbound mail in 5.1ms
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.3ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (20.3ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:34:07', '2016-01-18 23:34:07', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:34:07', '2016-01-18 23:34:07', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:34:07', '2016-01-18 23:34:07', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:34:07', '2016-01-18 23:34:07', 298486374)
+  [1m[36m (5.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:34:08.063823"], ["updated_at", "2016-01-18 23:34:08.063823"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:34:08.069197"], ["updated_at", "2016-01-18 23:34:08.069197"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?  [["question_id", 980190963], ["updated_at", "2016-01-18 23:34:08.086047"], ["id", 980190963]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+MainMailer#notify_question_author: processed outbound mail in 5.5ms
+  [1m[35m (0.9ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (11.0ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.3ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:35:53', '2016-01-18 23:35:53', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:35:53', '2016-01-18 23:35:53', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:35:53', '2016-01-18 23:35:53', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:35:53', '2016-01-18 23:35:53', 298486374)
+  [1m[36m (5.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.3ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (18.7ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:35:53.745571"], ["updated_at", "2016-01-18 23:35:53.745571"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:35:53.752254"], ["updated_at", "2016-01-18 23:35:53.752254"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?[0m  [["question_id", 980190963], ["updated_at", "2016-01-18 23:35:53.769510"], ["id", 980190963]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+
+MainMailer#notify_question_author: processed outbound mail in 6.7ms
+  [1m[36m (1.4ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:37:48', '2016-01-18 23:37:48', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-18 23:37:48', '2016-01-18 23:37:48', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:37:48', '2016-01-18 23:37:48', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-18 23:37:48', '2016-01-18 23:37:48', 298486374)
+  [1m[36m (5.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-18 23:37:48.773332"], ["updated_at", "2016-01-18 23:37:48.773332"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-18 23:37:48.786614"], ["updated_at", "2016-01-18 23:37:48.786614"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?  [["question_id", 980190963], ["updated_at", "2016-01-18 23:37:48.815639"], ["id", 980190963]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+
+MainMailer#notify_question_author: processed outbound mail in 6.3ms
+  [1m[35m (1.0ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[35mQuestion Load (0.2ms)[0m  SELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC
+  Rendered home/index.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.2ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.5ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:00:37', '2016-01-19 00:00:37', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:00:37', '2016-01-19 00:00:37', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:00:37', '2016-01-19 00:00:37', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:00:37', '2016-01-19 00:00:37', 298486374)
+  [1m[36m (1.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (18.0ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+  [1m[35m (0.3ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "author@question.com"], ["body", "a test question"], ["created_at", "2016-01-19 00:00:37.736538"], ["updated_at", "2016-01-19 00:00:37.736538"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "answers" ("email", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "author@answer.com"], ["body", "a test answer"], ["created_at", "2016-01-19 00:00:37.744306"], ["updated_at", "2016-01-19 00:00:37.744306"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "answers" SET "question_id" = ?, "updated_at" = ? WHERE "answers"."id" = ?[0m  [["question_id", 980190963], ["updated_at", "2016-01-19 00:00:37.774940"], ["id", 980190963]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+
+MainMailer#notify_question_author: processed outbound mail in 9.2ms
+  [1m[36m (0.8ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:17:45', '2016-01-19 00:17:45', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:17:45', '2016-01-19 00:17:45', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:17:45', '2016-01-19 00:17:45', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:17:45', '2016-01-19 00:17:45', 298486374)
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 1.1ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:18:34', '2016-01-19 00:18:34', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:18:34', '2016-01-19 00:18:34', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:18:34', '2016-01-19 00:18:34', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:18:34', '2016-01-19 00:18:34', 298486374)
+  [1m[36m (5.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (15.1ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.8ms)
+Completed 200 OK in 244ms (Views: 242.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 1.0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:19:59', '2016-01-19 00:19:59', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:19:59', '2016-01-19 00:19:59', 298486374)[0m
+  [1m[35mFixture Delete (0.2ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:19:59', '2016-01-19 00:19:59', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:19:59', '2016-01-19 00:19:59', 298486374)
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 1.0ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (13.1ms)
+  Rendered home/_navbar.html.erb (0.4ms)
+  Rendered home/_new_question_form.html.erb (0.5ms)
+Completed 200 OK in 195ms (Views: 193.9ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (0.4ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.3ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:22:10', '2016-01-19 00:22:10', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:22:10', '2016-01-19 00:22:10', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:22:10', '2016-01-19 00:22:10', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:22:10', '2016-01-19 00:22:10', 298486374)
+  [1m[36m (5.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.2ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (15.4ms)
+  Rendered home/_navbar.html.erb (0.9ms)
+  Rendered home/_new_question_form.html.erb (1.3ms)
+Completed 200 OK in 228ms (Views: 226.8ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 0.9ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFixture Delete (1.0ms)[0m  [1mDELETE FROM "answers"[0m
+  [1m[35mFixture Insert (0.2ms)[0m  INSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:22:42', '2016-01-19 00:22:42', 980190962)
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "answers" ("question_id", "email", "body", "created_at", "updated_at", "id") VALUES (1, 'MyString', 'MyText', '2016-01-19 00:22:42', '2016-01-19 00:22:42', 298486374)[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "questions"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:22:42', '2016-01-19 00:22:42', 980190962)[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "questions" ("email", "body", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2016-01-19 00:22:42', '2016-01-19 00:22:42', 298486374)
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+-----------------------------------------
+HomeControllerTest: test_should_get_index
+-----------------------------------------
+Processing by HomeController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1mSELECT "questions".* FROM "questions"  ORDER BY "questions"."created_at" DESC[0m
+  Rendered home/index.html.erb within layouts/application (14.9ms)
+  Rendered home/_navbar.html.erb (0.8ms)
+  Rendered home/_new_question_form.html.erb (1.3ms)
+Completed 200 OK in 222ms (Views: 220.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+MainMailerTest: test_notify_question_author
+-------------------------------------------
+
+MainMailer#notify_question_author: processed outbound mail in 1.0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
