@@ -1,3 +1,4 @@
-# ror_ask = Asking & Answering questions platform
+# ror_ask
+An asking & answering questions platform
 
-Fire up the server by: rails server
+Fire up the server by: `rails server`
